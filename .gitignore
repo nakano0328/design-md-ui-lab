@@ -222,3 +222,6 @@ __marimo__/
 node_modules/
 .vite/
 *.local
+
+# Local agent settings
+.claude/
