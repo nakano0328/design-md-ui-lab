@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+/*
+ * デザイントークン — DESIGN.md の値をここに集約する。
+ * DESIGN.md を差し替えたら、まずこのファイルの @theme を更新すること。
+ */
+@theme {
+  /* ブランドカラー(DESIGN.md §2 / Calm Indigo) */
+  --color-primary-50: #eef2ff;
+  --color-primary-100: #e0e7ff;
+  --color-primary-200: #c7d2fe;
+  --color-primary-300: #a5b4fc;
+  --color-primary-400: #818cf8;
+  --color-primary-500: #6366f1;
+  --color-primary-600: #4f46e5;
+  --color-primary-700: #4338ca;
+  --color-primary-800: #3730a3;
+  --color-primary-900: #312e81;
+
+  /* タイポグラフィ(DESIGN.md §3) */
+  --font-sans: "Inter", "Noto Sans JP", system-ui, -apple-system, "Segoe UI",
+    "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic UI", sans-serif;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-700 text-sm leading-relaxed;
+  }
+}
